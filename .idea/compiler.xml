@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="microservice-consume-movie-feign-hystrix" />
+        <module name="microservice-discovery-eureka" />
+        <module name="microservice-getway-zuul" />
+        <module name="microservice-hystrix-dashboard" />
+        <module name="microservice-hystrix-turbine" />
+        <module name="microservice-provider-user" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Docker-Learning" target="1.8" />
+      <module name="microservice-consume-movie-feign-hystrix" target="1.8" />
+      <module name="microservice-discovery-eureka" target="1.8" />
+      <module name="microservice-getway-zuul" target="1.8" />
+      <module name="microservice-hystrix-dashboard" target="1.8" />
+      <module name="microservice-hystrix-turbine" target="1.8" />
+      <module name="microservice-provider-user" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,29 @@
+# 表示docker-compose.yml文件使用的是Version 2 file format
+version: '2'
+# Version 2 file format的固定写法，为project定义服务
+services:
+  #指定服务名称
+  microservice-discovery-eureka:
+    #指定服务所用的镜像
+    image: microservice-discovery-eureka:latest
+    #爆暴露端口信息
+    ports:
+      - "8761:8761"
+  microservice-provider-user:
+    #指定镜像
+    image: microservice-provider-user
+    #连接microservice-discovery-eureka服务,这里使用的是service:alias的形式
+    links:
+      - microservice-discovery-eureka:discovery
+    #爆暴露端口信息
+    ports:
+      - "9000:9000"
+  microservice-consume-movie-feign-hystrix:
+    #指定镜像
+    image: microservice-consume-movie-feign-hystrix
+    #爆暴露端口信息
+    ports:
+      - "9103:9103"
+    #连接服务
+    links:
+      - microservice-discovery-eureka:discovery
